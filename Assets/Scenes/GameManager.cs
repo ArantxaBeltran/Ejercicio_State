@@ -92,11 +92,7 @@ public class GameManager : MonoBehaviour
             StartGame_();
             
         }
-        if (currentGameSate != GameState_.GameOver && MovementPlayer.vida <= 0)
-        {
-            ChangeGameState(GameState_.GameOver);
-            GameOver();
-        }
+       
 
 
     }
