@@ -8,11 +8,27 @@ public class Movimiento : MonoBehaviour
     private Animator anim;
     public float ahorizontal;
     public float bvertical;
+    public float puntos;
+    public Transform personajescale;
+
+    static Movimiento personaje;
+
+    private void Awake()
+    {
+
+        personaje = this;
+    }
+
+    public static Movimiento Getinstancepersonaje()
+    {
+        return personaje;
+    }
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponent<Animator>();
+        personajescale = GetComponent<Transform>();
     }
 
     // Update is called once per frame
